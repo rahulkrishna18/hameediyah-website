@@ -1,26 +1,221 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
+
+@theme {
+  --color-ivory: #f4ecde;
+  --color-paper: #ebe0cc;
+  --color-parchment: #ddcdb0;
+  --color-ink: #1b1814;
+  --color-charcoal: #12100e;
+  --color-soot: #221e19;
+  --color-turmeric: #d99a1e;
+  --color-saffron: #e8a83e;
+  --color-green: #1f3b2c;
+  --color-green-deep: #12241a;
+  --color-green-tile: #2f5d45;
+  --color-cinnamon: #8b4a2b;
+  --color-cinnamon-deep: #5c2e1a;
+  --color-brass: #b38b4d;
+  --color-gold: #d0aa60;
+
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-tamil: var(--font-tamil-serif), "Tamil Sangam MN", serif;
+  --font-jawi: var(--font-naskh), "Geeza Pro", serif;
+  --font-han: "Songti SC", "STSong", "Noto Serif SC", "Noto Serif CJK SC", serif;
+
+  --ease-heritage: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-slow: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --breakpoint-xs: 26rem;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --nav-h: 4.5rem;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-charcoal);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-turmeric);
+  color: var(--color-charcoal);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-turmeric);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 30, "WONK" 0;
+  }
+  .font-display-wonk {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-stretch: 90%;
+  }
+
+  .caption {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    font-variation-settings: "SOFT" 50, "opsz" 12;
+  }
+
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px currentColor;
+  }
+
+  /* Paper texture — subtle fibres + vignette */
+  .paper {
+    background-color: var(--color-ivory);
+    background-image:
+      radial-gradient(120% 90% at 50% 0%, transparent 55%, rgb(139 74 43 / 0.09) 100%),
+      url("/textures/paper.svg");
+    background-size: 100% 100%, 480px 480px;
+  }
+  .paper-dark {
+    background-color: var(--color-charcoal);
+    background-image:
+      radial-gradient(110% 80% at 50% 10%, rgb(217 154 30 / 0.06), transparent 60%),
+      url("/textures/paper.svg");
+    background-size: 100% 100%, 480px 480px;
+    background-blend-mode: normal, soft-light;
+  }
+
+  /* Archival photographic treatments */
+  .archival {
+    filter: sepia(0.35) contrast(1.06) saturate(0.75) brightness(0.98);
+  }
+  .archival-strong {
+    filter: grayscale(1) sepia(0.55) contrast(1.1) brightness(0.95);
+  }
+  .food-grade {
+    filter: saturate(0.92) contrast(1.06) brightness(0.98) sepia(0.08);
+  }
+
+  .rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, currentColor 12%, currentColor 88%, transparent);
+    opacity: 0.25;
+  }
+
+  .link-line {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s var(--ease-heritage);
+  }
+  .link-line:hover,
+  .link-line:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  .mask-arch {
+    border-radius: 999px 999px 0 0 / 50vw 50vw 0 0;
+  }
+}
+
+/* Film grain overlay, applied once at the root */
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  opacity: 0.07;
+  background-image: url("/textures/grain.svg");
+  background-size: 220px 220px;
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .grain {
+    animation: grain 1.2s steps(6) infinite;
+  }
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.06) rotate(0deg); }
+  50% { transform: translate3d(-1.2%, 0.8%, 0) scale(1.09) rotate(0.4deg); }
+}
+
+@keyframes dapple {
+  0%, 100% { opacity: 0.55; transform: translate3d(0, 0, 0) scale(1); }
+  33% { opacity: 0.8; transform: translate3d(2%, -1%, 0) scale(1.05); }
+  66% { opacity: 0.45; transform: translate3d(-2%, 1.5%, 0) scale(0.98); }
+}
+
+@keyframes scroll-cue {
+  0% { transform: scaleY(0); transform-origin: top; }
+  45% { transform: scaleY(1); transform-origin: top; }
+  55% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.origin-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse-ring 2.6s var(--ease-heritage) infinite;
+}
+
+/* Elements that GSAP reveals start hidden only when JS + motion are available */
+html.js-motion [data-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
