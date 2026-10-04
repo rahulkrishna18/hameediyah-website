@@ -4,7 +4,7 @@
  * [NST]   Balvin Kaur, "Hameediyah, Penang's oldest nasi kandar restaurant still going strong",
  *         New Straits Times, 20 August 2019.
  * [PTC]   "The History of Hameediyah, Penang Oldest Nasi Kandar", PenangToday Community (Facebook),
- *         27 February 2025 — republishes the NST text with photographs.
+ *         27 February 2025  republishes the NST text with photographs.
  * [SIGN]  Restaurant signage visible in the reference photographs (address, "Est. 1907", telephone).
  * [BOARD] The historic Hameediyah menu board photographed in the PenangToday post.
  * [BRIEF] The project brief supplied by the client.
@@ -42,6 +42,7 @@ export const visit = {
   phoneHref: "tel:+6042611095",
   lat: 5.4175, // Lebuh Campbell, OpenStreetMap
   lng: 100.3347,
+  hours: { days: "Monday  Sunday", time: "10am  11pm" }, // supplied by the client
   mapsQuery: "Hameediyah Restaurant, 164A Lebuh Campbell, George Town, Penang",
 } as const;
 
@@ -113,7 +114,7 @@ export const sellingRoutes = [
   { name: "Jalan Datuk Koyah" },
   { name: "Jalan Perangin", now: "now Jalan Prangin" },
   { name: "Tanjung Tokong" },
-  { name: "Jalan Penang", now: "where there was once a river — on market days" },
+  { name: "Jalan Penang", now: "where there was once a river  on market days" },
 ] as const;
 
 export type Era = "origin" | "street" | "war" | "shop" | "growth" | "today";
@@ -135,7 +136,7 @@ export const milestones: Milestone[] = [
     year: "1900s",
     era: "origin",
     title: "A spice trader arrives",
-    body: "M. Mohamed Thamby Rawther, a spice trader from Chittarkottai in Ramanathapuram, Tamil Nadu, arrives in Penang with his three sons — Seeni Packeer, Packeer Mohamed and Abdul Ghaney.",
+    body: "M. Mohamed Thamby Rawther, a spice trader from Chittarkottai in Ramanathapuram, Tamil Nadu, arrives in Penang with his three sons  Seeni Packeer, Packeer Mohamed and Abdul Ghaney.",
     image: "/images/harbour-ships.jpg",
     imageAlt: "Sailing ships and steamers anchored in Penang harbour, photographed before 1909",
     caption: "Ships in Penang harbour. Photograph by August Kaulfuss, before 1909.",
@@ -148,7 +149,7 @@ export const milestones: Milestone[] = [
     body: "The family rents a house on Lebuh Campbell from a Chinese landowner and sets up a shop selling spices from India. It is not long before they begin dabbling in the culinary business.",
     image: "/images/beach-street-1910.jpg",
     imageAlt: "Shophouses and rickshaws along Beach Street, George Town, around 1910",
-    caption: "Beach Street, George Town, c. 1910 — the city the family arrived into. C.J. Kleingrothe.",
+    caption: "Beach Street, George Town, c. 1910  the city the family arrived into. C.J. Kleingrothe.",
   },
   {
     id: "angsana",
@@ -158,14 +159,14 @@ export const milestones: Milestone[] = [
     body: "Mohamed Thamby begins selling nasi kandar under a large, shady Angsana tree on the field in front of the shop. Food may not yet be sold in shops, so curries are cooked at the back and carried out on a pole.",
     image: "/images/angsana-canopy.jpg",
     imageAlt: "The broad canopy of a mature Angsana tree",
-    caption: "An Angsana tree (Pterocarpus indicus). Illustrative — not the original tree.",
+    caption: "An Angsana tree (Pterocarpus indicus).",
   },
   {
     id: "queues",
     year: "Early years",
     era: "street",
     title: "From strangers to queues",
-    body: "Business does not start well — people are not yet familiar with nasi kandar. Eventually it gains momentum, and the men walk for miles to sell: the docks, Jalan Pitt, Jalan Datuk Koyah, Jalan Perangin, right up to Tanjung Tokong.",
+    body: "Business does not start well  people are not yet familiar with nasi kandar. Eventually it gains momentum, and the men walk for miles to sell: the docks, Jalan Pitt, Jalan Datuk Koyah, Jalan Perangin, right up to Tanjung Tokong.",
     image: "/images/weld-quay-1910.jpg",
     imageAlt: "Weld Quay waterfront in Penang around 1910",
     caption: "Weld Quay, Penang, c. 1910. C.J. Kleingrothe.",
@@ -185,7 +186,7 @@ export const milestones: Milestone[] = [
     year: "1945",
     era: "war",
     title: "Spending the banana money",
-    body: "When the British regain their hold on Malaya, sales spike — people hurry to spend their Japanese “banana money” before it becomes worthless.",
+    body: "When the British regain their hold on Malaya, sales spike  people hurry to spend their Japanese “banana money” before it becomes worthless.",
     image: "/images/quay-1910.jpg",
     imageAlt: "Boats moored along the quay in Penang",
     caption: "The quay at Penang, c. 1910. C.J. Kleingrothe.",
@@ -195,20 +196,20 @@ export const milestones: Milestone[] = [
     year: "After WWII",
     era: "shop",
     title: "No. 164, Lebuh Campbell",
-    body: "After the Second World War, food is allowed to be sold in shops. The first Hameediyah restaurant opens at No. 164, Lebuh Campbell — famous for its curries, kurmas, kapitan, murtabak, nasi briyani, rendang and mee goreng.",
+    body: "After the Second World War, food is allowed to be sold in shops. The first Hameediyah restaurant opens at No. 164, Lebuh Campbell  famous for its curries, kurmas, kapitan, murtabak, nasi briyani, rendang and mee goreng.",
     image: "/images/ref-golden-moments.jpg",
     imageAlt: "A wall display titled The Golden Moments of Hameediyah, showing archive photographs of cooks and staff",
-    caption: "“The Golden Moments of Hameediyah” — archive photographs on display. Via PenangToday Community.",
+    caption: "“The Golden Moments of Hameediyah”  archive photographs on display. Via PenangToday Community.",
   },
   {
     id: "vietnam",
-    year: "1960s–70s",
+    year: "1960s70s",
     era: "shop",
     title: "Five thousand portions",
-    body: "The Hameediyahs regularly supply immense quantities of food — including 5,000 portions of beef curry for American soldiers fighting in the Vietnam War.",
+    body: "The Hameediyahs regularly supply immense quantities of food  including 5,000 portions of beef curry for American soldiers fighting in the Vietnam War.",
     image: "/images/ref-counter-archive.jpg",
     imageAlt: "Three Hameediyah elders in white caps behind the restaurant counter, from a family photograph",
-    caption: "Behind the counter — a family photograph. Via PenangToday Community.",
+    caption: "Behind the counter  a family photograph. Via PenangToday Community.",
   },
   {
     id: "free-port",
@@ -235,10 +236,10 @@ export const milestones: Milestone[] = [
     year: "Today",
     era: "today",
     title: "Seven generations on",
-    body: "The green and yellow tiles and façade are retained, the heritage nasi kandar carrier is proudly displayed, and the elders' recipes are kept precisely — with Hameediyah Tandoori House just two doors away.",
+    body: "The green and yellow tiles and façade are retained, the heritage nasi kandar carrier is proudly displayed, and the elders' recipes are kept precisely  with Hameediyah Tandoori House just two doors away.",
     image: "/images/hameediyah-facade.jpg",
     imageAlt: "The yellow and green façade of Hameediyah Restaurant at No. 164A Campbell Street with a queue outside",
-    caption: "Hameediyah Restaurant, No. 164A Campbell Street. Photograph: Slleong (CC0).",
+    caption: "Hameediyah Restaurant, No. 164A Campbell Street.",
   },
 ];
 
@@ -262,11 +263,11 @@ export const signatureDishes: Dish[] = [
   {
     id: "murtabak",
     name: "Murtabak",
-    board: "Martabak — Chicken · Beef · Mutton · Vegetable",
+    board: "Martabak  Chicken · Beef · Mutton · Vegetable",
     image: "/images/dish-murtabak.jpg",
     imageAlt: "Golden, griddled squares of murtabak with a wedge of lemon",
     note: "Named among Hameediyah's signatures.",
-    detail: "On the old menu board it appears as Martabak, offered with chicken, beef, mutton or vegetable — and the word “MURTABAK” hangs over the counter in the archive photographs.",
+    detail: "On the old menu board it appears as Martabak, offered with chicken, beef, mutton or vegetable  and the word “MURTABAK” hangs over the counter in the archive photographs.",
     illustrative: true,
   },
   {
@@ -276,13 +277,13 @@ export const signatureDishes: Dish[] = [
     image: "/images/dish-kurmah.jpg",
     imageAlt: "A plate of kurma curry in a rich red-gold gravy",
     note: "The kurmas are part of what made the name.",
-    detail: "Listed as “mild” on the historic board. Like every Hameediyah curry, it begins with the family's own masala — fennel, cumin, white pepper, almond and cashew.",
+    detail: "Listed as “mild” on the historic board. Like every Hameediyah curry, it begins with the family's own masala  fennel, cumin, white pepper, almond and cashew.",
     illustrative: true,
   },
   {
     id: "beef-curry",
     name: "Beef Curry",
-    board: "Beef Curry — Large · Regular · A Piece",
+    board: "Beef Curry  Large · Regular · A Piece",
     image: "/images/dish-rendang.jpg",
     imageAlt: "Dark, slow-cooked beef in a spiced gravy",
     note: "The dish history kept asking for.",
@@ -292,7 +293,7 @@ export const signatureDishes: Dish[] = [
   {
     id: "briyani",
     name: "Nasi Briyani",
-    board: "Chicken Briyani — Saffron Rice · Mutton Briyani · Plain Briyani",
+    board: "Chicken Briyani  Saffron Rice · Mutton Briyani · Plain Briyani",
     image: "/images/dish-briyani.jpg",
     imageAlt: "Saffron-tinted briyani rice with spiced meat and pickles",
     note: "Saffron rice, by the full or half plate.",
@@ -396,8 +397,8 @@ export const heritageNumbers: HeritageNumber[] = [
   { value: 1907, label: "The year it began, under a tree on Lebuh Campbell", source: "NST; restaurant signage" },
   { value: 3, label: "Sons who came with Mohamed Thamby from Tamil Nadu", source: "NST" },
   { value: 7, suffix: "th", label: "Generation of the family carrying the recipes forward", source: "NST, 2019" },
-  { value: 5000, label: "Portions of beef curry supplied to American soldiers, 1960s–70s", source: "NST" },
-  { value: 164, prefix: "No.", label: "Lebuh Campbell — the first restaurant, which still stands", source: "NST" },
+  { value: 5000, label: "Portions of beef curry supplied to American soldiers, 1960s70s", source: "NST" },
+  { value: 164, prefix: "No.", label: "Lebuh Campbell  the first restaurant, which still stands", source: "NST" },
   { value: 5, label: "Named ingredients in the original masala, still used today", source: "NST" },
 ];
 

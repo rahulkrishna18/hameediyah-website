@@ -28,7 +28,7 @@ export function Menu() {
   return (
     <section id="menu" data-theme="dark" aria-labelledby="menu-title" className="relative overflow-hidden bg-green text-ivory">
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-[url('/textures/paper.svg')] bg-[length:480px] opacity-50 mix-blend-soft-light" />
-      {/* Tile band — a nod to the restaurant's green and yellow tiles */}
+      {/* Tile band  a nod to the restaurant's green and yellow tiles */}
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 h-3 bg-[repeating-linear-gradient(90deg,#d99a1e_0_24px,#2f5d45_24px_48px)] opacity-80"
@@ -46,7 +46,7 @@ export function Menu() {
           </div>
           <Reveal className="lg:col-span-4 lg:col-start-9">
             <p className="leading-relaxed text-ivory/70">
-              Every dish below is transcribed from Hameediyah&rsquo;s historic printed menu board. Prices are left out on purpose —
+              Every dish below is transcribed from Hameediyah&rsquo;s historic printed menu board. Prices are left out on purpose 
               what&rsquo;s cooking and what it costs today may differ, so ask at the counter.
             </p>
           </Reveal>
@@ -146,7 +146,7 @@ export function Menu() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <p className="caption mt-4 text-center text-ivory/45">Illustrative photograph.</p>
+            {/* <p className="caption mt-4 text-center text-ivory/45">Illustrative photograph.</p> */}
 
             <figure className="mx-auto mt-10 max-w-xs rotate-[-2deg] bg-[#f6efe2] p-2 shadow-[0_30px_50px_-20px_rgb(0_0_0/0.6)]">
               <div className="relative aspect-[720/560] overflow-hidden">

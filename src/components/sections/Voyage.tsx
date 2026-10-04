@@ -19,14 +19,14 @@ const proj = (lon: number, lat: number) => ({ x: r1(((lon - LON0) / (LON1 - LON0
 
 const O = mapData.points.chittarkottai;
 const D = mapData.points.georgetown;
-// Deliberately stylised arc — the family's actual passage is not documented.
+// Deliberately stylised arc  the family's actual passage is not documented.
 const ROUTE = `M${O.x},${O.y} C${O.x + 300},${O.y - 230} ${D.x - 330},${D.y - 330} ${D.x},${D.y}`;
 
 const STEPS = [
   {
     kicker: "Tamil Nadu",
     title: "Chittarkottai, Ramanathapuram",
-    body: "A spice trader's village on the coast of Tamil Nadu — and the beginning of the Hameediyah story.",
+    body: "A spice trader's village on the coast of Tamil Nadu  and the beginning of the Hameediyah story.",
   },
   {
     kicker: "The crossing · 1900s",
@@ -36,12 +36,12 @@ const STEPS = [
   {
     kicker: "Penang",
     title: "A house on Lebuh Campbell",
-    body: "Rented from a Chinese landowner, it became a shop selling spices from India — in the heart of George Town.",
+    body: "Rented from a Chinese landowner, it became a shop selling spices from India  in the heart of George Town.",
   },
   {
     kicker: "The waterfront",
     title: "Food for the docks",
-    body: "As nasi kandar caught on, the men walked for miles to sell it — starting with the docks at the nearby jetty.",
+    body: "As nasi kandar caught on, the men walked for miles to sell it  starting with the docks at the nearby jetty.",
   },
 ] as const;
 
@@ -277,7 +277,7 @@ export function Voyage() {
                   The Spice Route
                 </text>
                 <text x="165" y="72" textAnchor="middle" fontFamily="var(--font-display)" fontStyle="italic" fontSize="15" fill="#5c2e1a">
-                  Tamil Nadu — Penang · 1900s
+                  Tamil Nadu  Penang · 1900s
                 </text>
                 <text x="165" y="98" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="2.5" fill="#5c2e1a" fillOpacity="0.7">
                   ROUTE ILLUSTRATIVE
@@ -359,10 +359,10 @@ export function Voyage() {
               <div className="h-px w-full bg-ivory/15">
                 <div data-progress className="h-px origin-left scale-x-0 bg-gold motion-reduce:scale-x-100" />
               </div>
-              <p className="caption mt-3 text-ivory/45">
-                The route is drawn for illustration. Records say only that the family arrived in Penang in the 1900s — not the
+              {/* <p className="caption mt-3 text-ivory/45">
+                The route is drawn for illustration. Records say only that the family arrived in Penang in the 1900s  not the
                 passage they took.
-              </p>
+              </p> */}
             </div>
           </div>
           </div>

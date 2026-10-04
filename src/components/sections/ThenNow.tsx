@@ -16,7 +16,7 @@ const PAIRS: Pair[] = [
   {
     id: "waterfront",
     label: "The waterfront",
-    note: "Where the men first carried nasi kandar to the docks. Viewpoints differ — the quay itself remains.",
+    note: "Where the men first carried nasi kandar to the docks. Viewpoints differ  the quay itself remains.",
     then: { src: "/images/weld-quay-1910.jpg", alt: "Weld Quay in Penang around 1910", when: "c. 1910", caption: "Weld Quay, Penang. C.J. Kleingrothe.", archival: true },
     now: { src: "/images/weld-quay-2023.jpg", alt: "Aerial view of Weld Quay, George Town, in 2023", when: "2023", caption: "Weld Quay from above. HundenvonPenang, CC BY-SA 4.0." },
   },
@@ -41,7 +41,7 @@ const PAIRS: Pair[] = [
   {
     id: "shopfront",
     label: "The shopfront",
-    note: "The green and yellow façade has been kept — the signs have been renewed around it.",
+    note: "The green and yellow façade has been kept  the signs have been renewed around it.",
     then: {
       src: "/images/ref-shopfront-2019.jpg",
       alt: "Hameediyah's entrance in 2019 under an older signboard reading Est. 1907 and 164A",
@@ -138,7 +138,7 @@ export function ThenNow() {
             />
           </div>
           <Reveal className="lg:col-span-4 lg:col-start-9">
-            <p className="leading-relaxed text-ivory/65">Scroll to move through time — or drag the line to compare for yourself.</p>
+            <p className="leading-relaxed text-ivory/65">Scroll to move through time  or drag the line to compare for yourself.</p>
           </Reveal>
         </div>
 

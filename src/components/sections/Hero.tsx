@@ -77,7 +77,7 @@ export function Hero() {
       aria-labelledby="hero-title"
       className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-green-deep text-ivory"
     >
-      {/* Layer 0 — the 1909 Admiralty chart of Penang Harbour */}
+      {/* Layer 0  the 1909 Admiralty chart of Penang Harbour */}
       <div aria-hidden className="absolute inset-0 -z-20">
         <div data-hero-chart className="absolute inset-0 opacity-0">
           <Image
@@ -94,7 +94,7 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-charcoal/80 to-transparent" />
       </div>
 
-      {/* Layer 1 — oversized founding year */}
+      {/* Layer 1  oversized founding year */}
       <div
         aria-hidden
         data-hero-year
@@ -112,7 +112,7 @@ export function Hero() {
         </span>
       </div>
 
-      {/* Layer 2 — floating masala, rendered only while the hero is on screen */}
+      {/* Layer 2  floating masala, rendered only while the hero is on screen */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-[5] transition-opacity duration-[2500ms] ease-out"
@@ -211,7 +211,7 @@ export function Hero() {
           >
             <Image
               src="/images/dish-nasi-kandar.jpg"
-              alt="A plate of nasi kandar — rice with curries poured over"
+              alt="A plate of nasi kandar  rice with curries poured over"
               fill
               sizes="(min-width: 1024px) 12vw, 28vw"
               className="food-grade scale-[1.15] object-cover"
@@ -220,7 +220,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Signage band — as written on the restaurant's own sign */}
+      {/* Signage band  as written on the restaurant's own sign */}
       <div className="relative border-t border-ivory/10 bg-charcoal/40 backdrop-blur-[2px]">
         <div
           data-hero-bar

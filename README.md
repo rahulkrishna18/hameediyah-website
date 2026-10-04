@@ -38,7 +38,7 @@ Do not add dates, prices, opening hours or statistics that cannot be traced to a
 Decisions made against the brief:
 - **Ayam Bawang** and **Crab Curry** are not shown, because neither reference mentions them. Mutton Kurmah is
   shown, because it is on the historic menu board.
-- **Opening hours** are not published. The site links to Google Maps for current hours instead.
+- **Opening hours** (Monday – Sunday, 10am – 11pm) were supplied by the client and live in `content.ts`.
 - **Prices** are omitted from the menu. The board's prices are historical.
 - The **Tamil Nadu → Penang route** is drawn as an illustration and is labelled as such. The sources say only that
   the family arrived "in the 1900s".

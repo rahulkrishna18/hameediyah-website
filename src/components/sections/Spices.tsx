@@ -127,7 +127,7 @@ export function Spices() {
                 );
               })}
             </ul>
-            <p className="caption mt-4 text-ivory/40">Named by Abdul Sukkor Syed Ibrahim, seventh generation (NST, 2019). Spices rendered in 3D for illustration.</p>
+            <p className="caption mt-4 text-ivory/40">Named by Abdul Sukkor Syed Ibrahim, seventh generation (NST, 2019).</p>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ export function Spices() {
               <p className="eyebrow text-gold">Still done by hand</p>
               <Reveal as="blockquote" className="mt-5">
                 <p className="font-display text-[clamp(1.6rem,2.6vw,2.4rem)] italic leading-snug">“{quotes.wholeSpices.text}”</p>
-                <footer className="eyebrow mt-5 text-[0.6rem] text-ivory/45">— {quotes.wholeSpices.by}</footer>
+                <footer className="eyebrow mt-5 text-[0.6rem] text-ivory/45"> {quotes.wholeSpices.by}</footer>
               </Reveal>
             </div>
             <ol data-process className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 lg:col-span-7 lg:col-start-6 lg:self-end">
@@ -156,7 +156,7 @@ export function Spices() {
             </ol>
           </div>
           <Reveal className="mt-16 max-w-2xl">
-            <p className="text-ivory/60">“{quotes.quality.text}” — {quotes.quality.by}</p>
+            <p className="text-ivory/60">“{quotes.quality.text}”  {quotes.quality.by}</p>
           </Reveal>
         </div>
       </div>

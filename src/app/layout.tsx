@@ -40,14 +40,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hameediyah.vercel.a
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Hameediyah — From a spice route to a Penang icon · Est. 1907",
+    default: "Hameediyah  From a spice route to a Penang icon · Est. 1907",
     template: "%s · Hameediyah, Penang",
   },
   description:
-    "Since 1907, Hameediyah has served nasi kandar on Lebuh Campbell, George Town — a story that begins with a spice trader from Tamil Nadu and an Angsana tree.",
+    "Since 1907, Hameediyah has served nasi kandar on Lebuh Campbell, George Town  a story that begins with a spice trader from Tamil Nadu and an Angsana tree.",
   keywords: ["Hameediyah", "nasi kandar", "Penang", "George Town", "Lebuh Campbell", "Campbell Street", "1907", "heritage restaurant"],
   openGraph: {
-    title: "Hameediyah — From a spice route to a Penang icon",
+    title: "Hameediyah  From a spice route to a Penang icon",
     description: "Penang's oldest nasi kandar restaurant. Lebuh Campbell, George Town. Est. 1907.",
     type: "website",
     locale: "en_MY",
@@ -81,6 +81,14 @@ const jsonLd = {
     addressCountry: "MY",
   },
   geo: { "@type": "GeoCoordinates", latitude: visit.lat, longitude: visit.lng },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "10:00",
+      closes: "23:00",
+    },
+  ],
 };
 
 // Runs before first paint: elements marked [data-reveal] start hidden only when motion is allowed.

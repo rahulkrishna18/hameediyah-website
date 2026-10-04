@@ -98,7 +98,8 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="lg:col-span-2 lg:col-start-11">
+          {/* Sources are kept in the markup but hidden from the UI */}
+          <div className="hidden">
             <p className="eyebrow text-[0.6rem] text-gold">Sources</p>
             <ul className="mt-5 space-y-3 text-sm text-ivory/55">
               <li>

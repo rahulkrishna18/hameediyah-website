@@ -17,7 +17,7 @@ const STEPS = [
   {
     n: "ii",
     title: "Two baskets, one pole",
-    body: "Two basketfuls of food were balanced on a bamboo pole across the shoulders — a kandar, in Malay.",
+    body: "Two basketfuls of food were balanced on a bamboo pole across the shoulders  a kandar, in Malay.",
   },
   {
     n: "iii",
@@ -27,7 +27,7 @@ const STEPS = [
   {
     n: "iv",
     title: "And so, a name",
-    body: "“It was this method of carrying the food that gave nasi kandar its name.” Nasi — rice. Kandar — the pole that carried it.",
+    body: "“It was this method of carrying the food that gave nasi kandar its name.” Nasi  rice. Kandar  the pole that carried it.",
   },
 ] as const;
 
@@ -116,9 +116,9 @@ export function Kandar() {
           <div ref={stage} data-journey="kandar" className="relative min-h-[18rem] lg:col-span-5 lg:h-[72vh]">
             <div aria-hidden className="absolute inset-[8%] rounded-full bg-[radial-gradient(closest-side,rgb(217_154_30/0.28),transparent)]" />
             {near && <KandarScene active={visible} progress={progress} reduced={reduced} className="!absolute inset-0" />}
-            <p className="eyebrow absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.58rem] text-ink/45">
+            {/* <p className="eyebrow absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.58rem] text-ink/45">
               Illustration · bamboo pole, two baskets
-            </p>
+            </p> */}
           </div>
 
           {/* Mobile steps */}
@@ -144,7 +144,7 @@ export function Kandar() {
                 />
               </div>
               <figcaption className="caption px-1 pt-2.5 text-ink/65">
-                Nasi kandar sellers with the shoulder pole, 1950s. Photographer unknown — shown for the tradition, not of Hameediyah.
+                Nasi kandar sellers with the shoulder pole, 1950s. Photographer unknown  shown for the tradition, not of Hameediyah.
               </figcaption>
             </figure>
             <p className="mt-8 font-display text-lg italic leading-snug text-ink/70">

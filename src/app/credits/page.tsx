@@ -91,7 +91,7 @@ export default function CreditsPage() {
           <ul className="mt-6 space-y-3 text-sm">
             {dataCredits.map((d) => (
               <li key={d.title}>
-                <span className="font-medium">{d.title}</span> — {d.author} ·{" "}
+                <span className="font-medium">{d.title}</span>  {d.author} ·{" "}
                 <a href={d.source} target="_blank" rel="noopener noreferrer" className="link-line text-cinnamon">
                   {d.license}
                 </a>

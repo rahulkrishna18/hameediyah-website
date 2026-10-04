@@ -40,7 +40,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
       gsap.ticker.lagSmoothing(0);
     }
 
-    // Layout can shift as fonts and lazy images settle — keep triggers accurate.
+    // Layout can shift as fonts and lazy images settle  keep triggers accurate.
     const refresh = () => ScrollTrigger.refresh();
     document.fonts?.ready.then(refresh);
     window.addEventListener("load", refresh);

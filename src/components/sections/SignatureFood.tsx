@@ -129,7 +129,7 @@ export function SignatureFood() {
                   <p className="mt-2 font-sans text-[0.95rem] font-semibold uppercase tracking-[0.12em] [font-stretch:80%] text-[#2b2a5c]">{d.board}</p>
                 </Reveal>
               )}
-              {d.illustrative && <p className="caption mt-4 text-ink/45">Photograph is illustrative of the dish, not taken at Hameediyah.</p>}
+              {/* {d.illustrative && <p className="caption mt-4 text-ink/45">Photograph is illustrative of the dish, not taken at Hameediyah.</p>} */}
             </li>
           ))}
         </ol>

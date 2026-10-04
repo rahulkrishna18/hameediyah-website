@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, type RefObject } from "react";
 import * as THREE from "three";
 
 /**
- * The kandar: a bamboo shoulder pole with two baskets — "two basketfuls of nasi kandar
+ * The kandar: a bamboo shoulder pole with two baskets  "two basketfuls of nasi kandar
  * balanced on a pole" (NST, 2019). Built from primitives; no external assets.
  */
 

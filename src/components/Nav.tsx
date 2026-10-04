@@ -89,7 +89,7 @@ export function Nav() {
         )}
       >
         <nav aria-label="Primary" className="mx-auto flex h-[var(--nav-h)] max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12">
-          <a href="#top" onClick={(e) => go(e, "#top")} aria-label="Hameediyah — back to top" className="relative z-10">
+          <a href="#top" onClick={(e) => go(e, "#top")} aria-label="Hameediyah  back to top" className="relative z-10">
             <Wordmark light={!light} />
           </a>
 

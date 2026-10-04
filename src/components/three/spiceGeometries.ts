@@ -13,7 +13,7 @@ function hash(x: number, y: number, z: number) {
   return s - Math.floor(s);
 }
 
-/** Ridged, slightly curved seed — the shape of fennel and cumin. */
+/** Ridged, slightly curved seed  the shape of fennel and cumin. */
 function seed({ length, radius, ridges, curve, depth }: { length: number; radius: number; ridges: number; curve: number; depth: number }) {
   const g = new THREE.SphereGeometry(1, 28, 20);
   const p = g.attributes.position as THREE.BufferAttribute;

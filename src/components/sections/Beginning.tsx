@@ -92,7 +92,7 @@ export function Beginning() {
                         பிறப்பிடம்
                       </p>
                     </div>
-                    <p className="font-display text-sm italic text-ink/55">Folio I</p>
+                    {/* <p className="font-display text-sm italic text-ink/55">Folio I</p> */}
                   </div>
                   <h3 className="mt-6 font-display text-[clamp(2.2rem,4vw,3.4rem)] leading-none tracking-[-0.02em]">{family.origin}</h3>
                   <dl className="mt-5 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[0.92rem]">
@@ -115,7 +115,7 @@ export function Beginning() {
                     />
                     <div aria-hidden className="absolute inset-0 shadow-[inset_0_0_50px_rgb(60_35_15/0.4)]" />
                   </div>
-                  <p className="caption mt-3 text-ink/55">Whole cumin in a brass bowl — one of the five spices the family still names in its masala.</p>
+                  <p className="caption mt-3 text-ink/55">Whole cumin in a brass bowl  one of the five spices the family still names in its masala.</p>
                   <div
                     data-origin-stamp
                     aria-hidden
@@ -146,7 +146,7 @@ export function Beginning() {
               <Reveal className="mt-7 max-w-xl text-lg leading-relaxed text-ink/75" delay={0.1}>
                 <p>
                   A spice trader from Chittarkottai, in the district of Ramanathapuram, Tamil Nadu. He arrived in Penang in the
-                  1900s — and he did not come alone.
+                  1900s  and he did not come alone.
                 </p>
               </Reveal>
             </div>
@@ -180,7 +180,7 @@ export function Beginning() {
                   <p className="font-display text-xl italic leading-snug text-ink/80 sm:text-2xl">
                     “In those days, it was common for the men to travel abroad for business, leaving the women behind.”
                   </p>
-                  <footer className="eyebrow mt-4 text-[0.62rem] text-ink/50">— Ahmed Seeni Pakir, sixth generation</footer>
+                  <footer className="eyebrow mt-4 text-[0.62rem] text-ink/50"> Ahmed Seeni Pakir, sixth generation</footer>
                 </blockquote>
               </Reveal>
             </div>
@@ -195,18 +195,18 @@ export function Beginning() {
                   {quotes.notAChef.text}
                   <span className="text-turmeric">”</span>
                 </p>
-                <footer className="eyebrow mt-6 text-[0.62rem] text-ink/50">— {quotes.notAChef.by}</footer>
+                <footer className="eyebrow mt-6 text-[0.62rem] text-ink/50"> {quotes.notAChef.by}</footer>
               </Reveal>
             </div>
 
-            <div data-journey="spices">
+            {/* <div data-journey="spices">
               <Reveal>
                 <p className="eyebrow text-cinnamon">A masala of their own</p>
               </Reveal>
               <Reveal className="mt-6 max-w-xl text-lg leading-relaxed text-ink/75">
                 <p>
                   The family rented a house on Lebuh Campbell from a Chinese landowner and opened a shop selling spices from India.
-                  With that knowledge of spices and tips from family members, Mohamed Thamby and his sons came up with a masala recipe of their own — still the base of every Hameediyah curry.
+                  With that knowledge of spices and tips from family members, Mohamed Thamby and his sons came up with a masala recipe of their own  still the base of every Hameediyah curry.
                 </p>
               </Reveal>
               <Reveal as="ul" childrenStagger className="mt-10 flex flex-wrap gap-2.5" stagger={0.08}>
@@ -222,10 +222,10 @@ export function Beginning() {
               <Reveal className="mt-8">
                 <p className="caption text-ink/60">
                   “We use the same masala, which includes fennel, cumin, white pepper, almond and cashew nuts that Mohamed Thamby had
-                  come up with.” — Abdul Sukkor Syed Ibrahim, seventh generation
+                  come up with.”  Abdul Sukkor Syed Ibrahim, seventh generation
                 </p>
               </Reveal>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

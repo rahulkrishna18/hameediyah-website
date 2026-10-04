@@ -8,7 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { RevealText } from "@/components/ui/RevealText";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { useInViewport } from "@/hooks/useInViewport";
-import { mapsDirectionsUrl, mapsEmbedUrl, mapsSearchUrl, visit } from "@/lib/content";
+import { mapsDirectionsUrl, mapsEmbedUrl, visit } from "@/lib/content";
 
 export function Visit() {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -54,13 +54,8 @@ export function Visit() {
             <Reveal className="mt-14 space-y-8 border-t border-ink/15 pt-10" delay={0.15}>
               <div>
                 <p className="eyebrow text-[0.62rem] text-ink/50">Opening hours</p>
-                <p className="mt-3 max-w-sm leading-relaxed text-ink/75">
-                  Hours aren&rsquo;t published here, so please check today&rsquo;s times before you travel.{" "}
-                  <a href={mapsSearchUrl} target="_blank" rel="noopener noreferrer" className="link-line font-semibold text-cinnamon">
-                    See current hours on Google Maps
-                  </a>
-                  .
-                </p>
+                <p className="mt-3 font-display text-2xl leading-tight text-ink">{visit.hours.days}</p>
+                <p className="mt-1 font-display text-xl italic text-cinnamon">{visit.hours.time}</p>
               </div>
               <div>
                 <p className="eyebrow text-[0.62rem] text-ink/50">Two doors away</p>
@@ -72,7 +67,7 @@ export function Visit() {
               <div>
                 <p className="eyebrow text-[0.62rem] text-ink/50">Look for</p>
                 <p className="mt-3 max-w-sm leading-relaxed text-ink/75">
-                  The yellow and green shophouse with the sign that reads <span className="italic">Established 1907</span> — and,
+                  The yellow and green shophouse with the sign that reads <span className="italic">Established 1907</span>  and,
                   quite possibly, a queue outside.
                 </p>
               </div>

@@ -125,7 +125,7 @@ export function Timeline() {
             <p className="mt-8 max-w-md text-lg leading-relaxed text-ivory/70">
               Occupation, liberation, a free port lost, a city transformed. Through it all, people kept coming back for the nasi kandar.
             </p>
-            <p className="caption mt-10 max-w-sm text-ivory/50">“{quotes.upheavals.text}” — {quotes.upheavals.by}</p>
+            <p className="caption mt-10 max-w-sm text-ivory/50">“{quotes.upheavals.text}”  {quotes.upheavals.by}</p>
             <p className="eyebrow mt-12 hidden items-center gap-3 text-[0.6rem] text-gold lg:flex">
               Scroll to travel through time
               <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" aria-hidden>

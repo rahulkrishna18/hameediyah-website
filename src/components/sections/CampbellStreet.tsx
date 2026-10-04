@@ -71,7 +71,7 @@ export function CampbellStreet() {
                 Beneath it, Mohamed Thamby began to sell nasi kandar.
               </p>
               <p>
-                It was a place where adults gathered between working hours and children ran around. The field is gone now —
+                It was a place where adults gathered between working hours and children ran around. The field is gone now 
                 replaced by shoplots. The street remains.
               </p>
             </Reveal>
@@ -81,7 +81,7 @@ export function CampbellStreet() {
             <ArchivalPrint
               src="/images/beach-street-1910.jpg"
               alt="Shophouses, rickshaws and pedestrians on Beach Street, George Town, around 1910"
-              caption="Beach Street, George Town, c. 1910 — the city the family knew. C.J. Kleingrothe."
+              caption="Beach Street, George Town, c. 1910  the city the family knew. C.J. Kleingrothe."
               label="Fig. 1"
               sizes="(min-width: 1024px) 34vw, 90vw"
               rotate={2}
@@ -113,7 +113,7 @@ export function CampbellStreet() {
               Curries cooked behind the shop, carried out on the kandar, rice cooked on the spot.
             </p>
             <p className="mt-5 text-ivory/65">
-              Business did not start well — people were not yet familiar with nasi kandar. Eventually it gained momentum, with
+              Business did not start well  people were not yet familiar with nasi kandar. Eventually it gained momentum, with
               customers queuing up for a plate.
             </p>
           </Reveal>
@@ -121,7 +121,7 @@ export function CampbellStreet() {
 
         <Reveal as="blockquote" className="mx-auto mt-28 max-w-4xl text-center lg:mt-36">
           <p className="font-display text-[clamp(1.6rem,3.4vw,3rem)] font-[330] italic leading-[1.2]">“{quotes.share.text}”</p>
-          <footer className="eyebrow mt-6 text-[0.62rem] text-ivory/45">— {quotes.share.by}</footer>
+          <footer className="eyebrow mt-6 text-[0.62rem] text-ivory/45"> {quotes.share.by}</footer>
         </Reveal>
 
         {/* The walking routes */}
@@ -133,7 +133,7 @@ export function CampbellStreet() {
                 They walked <span className="italic text-saffron">for miles.</span>
               </h3>
               <p className="mt-6 max-w-md text-ivory/65">
-                The men carried their nasi kandar far beyond the field — from the docks at the nearby jetty right up to Tanjung Tokong.
+                The men carried their nasi kandar far beyond the field  from the docks at the nearby jetty right up to Tanjung Tokong.
               </p>
               <p className="mt-8 max-w-md font-display text-xl italic text-ivory/80">“{quotes.ambitious.text}”</p>
               <div className="mt-10 hidden lg:block">
