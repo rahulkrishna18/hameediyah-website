@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Pin the workspace root (a stray lockfile exists in a parent directory on some machines)
   turbopack: { root: process.cwd() },
+  devIndicators: false,
   images: {
     formats: ["image/avif", "image/webp"],
     qualities: [70, 75, 85],

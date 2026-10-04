@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     images: [{ url: "/images/hameediyah-facade.jpg", width: 1600, height: 2133, alt: "Hameediyah Restaurant on Campbell Street" }],
   },
   twitter: { card: "summary_large_image" },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {

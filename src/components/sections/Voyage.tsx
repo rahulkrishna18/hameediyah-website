@@ -110,10 +110,10 @@ export function Voyage() {
           "[data-map]",
           desktop
             ? { rotateX: 36, rotateZ: -7, scale: 0.86, yPercent: 6 }
-            : { rotateX: 30, rotateZ: -4, scale: 0.95, xPercent: 24 },
+            : { rotateX: 30, rotateZ: -4, scale: 0.95, xPercent: 10 },
           desktop
             ? { rotateX: 20, rotateZ: -2, scale: 1, yPercent: 0, duration: 1.2 }
-            : { rotateX: 16, rotateZ: -1, scale: 1, xPercent: 20, duration: 1.2 },
+            : { rotateX: 16, rotateZ: -1, scale: 1, xPercent: 10, duration: 1.2 },
           0,
         )
           .to("[data-origin-label]", { opacity: 1, duration: 0.4 }, 0.4)
@@ -121,7 +121,7 @@ export function Voyage() {
           .to("[data-step='1']", { autoAlpha: 1, y: 0, duration: 0.4 }, 1.85)
           .to(route, { strokeDashoffset: 0, duration: 2.2 }, 1.4)
           .to({ p: 0 }, { p: 1, duration: 2.2, onUpdate() { moveShip(this.targets()[0].p); } }, 1.4)
-          .to("[data-map]", desktop ? { rotateZ: 0, duration: 2.2 } : { xPercent: -22, rotateZ: 0, duration: 2.2 }, 1.4)
+          .to("[data-map]", desktop ? { rotateZ: 0, duration: 2.2 } : { xPercent: -36, rotateZ: 0, duration: 2.2 }, 1.4)
           .to("[data-step='1']", { autoAlpha: 0, y: -30, duration: 0.4 }, 3.3)
           .to("[data-dest]", { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }, 3.5)
           .to("[data-step='2']", { autoAlpha: 1, y: 0, duration: 0.4 }, 3.75)
@@ -130,7 +130,7 @@ export function Voyage() {
             "[data-map]",
             desktop
               ? { scale: 1.55, rotateX: 12, xPercent: -24, yPercent: -14, duration: 1.4, ease: "power2.inOut" }
-              : { scale: 1.5, rotateX: 10, xPercent: -36, yPercent: -10, duration: 1.4, ease: "power2.inOut" },
+              : { scale: 1.5, rotateX: 10, xPercent: -54, yPercent: -10, duration: 1.4, ease: "power2.inOut" },
             4.5,
           )
           .to("[data-step='3']", { autoAlpha: 1, y: 0, duration: 0.4 }, 5.05)
@@ -151,7 +151,7 @@ export function Voyage() {
 
   return (
     <section ref={ref} id="journey" data-theme="dark" aria-labelledby="journey-title" className="relative bg-charcoal text-ivory">
-      <div data-pin className="relative overflow-hidden motion-safe:h-[100svh]">
+      <div data-pin className="relative overflow-hidden motion-safe:h-[100dvh]">
         <div aria-hidden className="absolute inset-0 bg-[radial-gradient(70%_60%_at_60%_55%,rgb(217_154_30/0.14),transparent_70%)]" />
 
         <header className="relative z-20 w-full bg-gradient-to-b from-charcoal via-charcoal/80 to-transparent pb-14 pt-[calc(var(--nav-h)+1.25rem)] motion-safe:absolute motion-safe:inset-x-0 motion-safe:top-0">

@@ -80,7 +80,7 @@ export function Kandar() {
 
   return (
     <section ref={ref} id="kandar" data-theme="light" aria-labelledby="kandar-title" className="relative bg-paper text-ink">
-      <div data-kpin className="paper relative overflow-hidden motion-safe:h-[100svh]">
+      <div data-kpin className="paper relative overflow-hidden motion-safe:h-[100dvh]">
         <p
           aria-hidden
           data-kword
