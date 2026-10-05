@@ -38,7 +38,6 @@ export function Numbers() {
             >
               <dt className="order-2">
                 <span className="block max-w-xs font-display text-xl leading-snug">{n.label}</span>
-                <span className="eyebrow mt-3 block text-[0.56rem] text-charcoal/50">Source · {n.source}</span>
               </dt>
               <dd className="order-1 flex items-baseline gap-2 font-display font-[320] leading-[0.85] tracking-[-0.05em] text-cinnamon-deep">
                 {n.prefix && <span className="font-display text-[clamp(1.6rem,2.6vw,2.4rem)] italic tracking-normal">{n.prefix}</span>}

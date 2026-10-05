@@ -43,7 +43,6 @@ export function Hero() {
           .fromTo("[data-hero-arch]", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 2, ease: "expo.inOut" }, 0.35)
           .from("[data-hero-arch-img]", { scale: 1.35, duration: 2.6 }, 0.35)
           .from("[data-hero-print]", { y: 120, rotate: -14, opacity: 0, duration: 2 }, 1.0)
-          .from("[data-hero-plate]", { scale: 0.4, rotate: -40, opacity: 0, duration: 2 }, 1.2)
           .from("[data-hero-copy] > *", { y: 30, opacity: 0, duration: 1.4, stagger: 0.1 }, 1.1)
           .from("[data-hero-bar] > *", { y: 20, opacity: 0, duration: 1.2, stagger: 0.08 }, 1.4);
 
@@ -204,19 +203,6 @@ export function Hero() {
             </div>
             <figcaption className="caption px-1 pb-0.5 pt-2 text-[0.68rem] text-ink/70 sm:text-[0.74rem]">Weld Quay, Penang, c. 1910</figcaption>
           </figure>
-
-          <div
-            data-hero-plate
-            className="absolute -right-2 bottom-[18%] aspect-square w-[30%] overflow-hidden rounded-full shadow-[0_24px_50px_-16px_rgb(0_0_0/0.8)] ring-[6px] ring-[#f6efe2] sm:w-[26%] lg:-right-4 lg:w-[30%]"
-          >
-            <Image
-              src="/images/dish-nasi-kandar.jpg"
-              alt="A plate of nasi kandar  rice with curries poured over"
-              fill
-              sizes="(min-width: 1024px) 12vw, 28vw"
-              className="food-grade scale-[1.15] object-cover"
-            />
-          </div>
         </div>
       </div>
 
