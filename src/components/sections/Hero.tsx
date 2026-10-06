@@ -136,8 +136,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-[1600px] flex-1 grid-cols-1 items-center gap-10 px-5 pb-28 pt-[calc(var(--nav-h)+2.5rem)] sm:px-8 lg:grid-cols-12 lg:gap-6 lg:px-12 lg:pb-32">
         <div data-hero-content className="relative lg:col-span-7">
-          <p data-reveal className="eyebrow mb-7 flex items-center gap-3 text-gold">
-            <span className="inline-block h-px w-10 bg-gold/70" aria-hidden />
+          <p data-reveal className="eyebrow mb-7 text-gold">
             Lebuh Campbell · George Town · Penang
           </p>
           <RevealText

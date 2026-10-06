@@ -57,12 +57,12 @@ export const family = {
   region: "Tamil Nadu, India",
   sons: ["Seeni Packeer", "Packeer Mohamed", "Abdul Ghaney"],
   sixthGeneration: { name: "Ahmed Seeni Pakir", note: "sixth generation of the Rawther family (aged 65 in 2019)" },
-  seventhGeneration: { name: "Abdul Sukkor Syed Ibrahim", note: "seventh-generation Hameediyah (aged 23 in 2019)" },
+  seventhGeneration: { name: "Abdul Sukkor Syed Ibrahim", note: "seventh generation of Hameediyah (aged 23 in 2019)" },
 } as const;
 
 /** [NST] "We use the same masala, which includes fennel, cumin, white pepper, almond and cashew nuts" */
 export const masala = [
-  { id: "fennel", name: "Fennel", tamil: "சோம்பு", note: "Sweet, anise-bright seed" },
+  { id: "fennel", name: "Fennel", tamil: "சோம்பு", note: "Sweet seed, bright with anise" },
   { id: "cumin", name: "Cumin", tamil: "சீரகம்", note: "Earthy, warm, toasted" },
   { id: "white-pepper", name: "White pepper", tamil: "வெள்ளை மிளகு", note: "Clean, lingering heat" },
   { id: "almond", name: "Almond", tamil: "பாதாம்", note: "Body and richness" },
@@ -74,7 +74,7 @@ export const masalaProcess = ["Buy whole", "Mix", "Roast", "Grind"] as const;
 
 export const quotes = {
   notAChef: {
-    text: "Mohamed Thamby was not a chef. But he was good at observing the cooking skills of his grandfather, who was a well-known wedding cook in his village, and that of the female members of the family.",
+    text: "Mohamed Thamby was not a chef. But he was good at observing the cooking skills of his grandfather, who was a well known wedding cook in his village, and that of the female members of the family.",
     by: "Ahmed Seeni Pakir, sixth generation",
   },
   masala: {
@@ -275,7 +275,7 @@ export const signatureDishes: Dish[] = [
     name: "Mutton Kurmah",
     board: "Mutton Kurmah (Mild) · Chicken Kurmah (Mild)",
     image: "/images/dish-kurmah.jpg",
-    imageAlt: "A plate of kurma curry in a rich red-gold gravy",
+    imageAlt: "A plate of kurma curry in a rich golden red gravy",
     note: "The kurmas are part of what made the name.",
     detail: "Listed as “mild” on the historic board. Like every Hameediyah curry, it begins with the family's own masala  fennel, cumin, white pepper, almond and cashew.",
     illustrative: true,
@@ -285,7 +285,7 @@ export const signatureDishes: Dish[] = [
     name: "Beef Curry",
     board: "Beef Curry  Large · Regular · A Piece",
     image: "/images/dish-rendang.jpg",
-    imageAlt: "Dark, slow-cooked beef in a spiced gravy",
+    imageAlt: "Dark, slow cooked beef in a spiced gravy",
     note: "The dish history kept asking for.",
     detail: "Made in greater quantity during the Japanese occupation, and supplied by the 5,000 portion to American soldiers in the 1960s and 70s.",
     illustrative: true,
@@ -295,7 +295,7 @@ export const signatureDishes: Dish[] = [
     name: "Nasi Briyani",
     board: "Chicken Briyani  Saffron Rice · Mutton Briyani · Plain Briyani",
     image: "/images/dish-briyani.jpg",
-    imageAlt: "Saffron-tinted briyani rice with spiced meat and pickles",
+    imageAlt: "Briyani rice tinted with saffron, with spiced meat and pickles",
     note: "Saffron rice, by the full or half plate.",
     detail: "The old board offers chicken, mutton and plain briyani, each by the full or half plate.",
     illustrative: true,
@@ -336,7 +336,7 @@ export const menu: MenuCategory[] = [
     label: "Chicken",
     tamil: "கோழி",
     image: "/images/dish-kurmah.jpg",
-    imageAlt: "Chicken in a red-gold kurma gravy",
+    imageAlt: "Chicken in a golden red kurma gravy",
     items: [
       { name: "Chicken Curry" },
       { name: "Chicken Kurmah", note: "Mild" },
@@ -350,7 +350,7 @@ export const menu: MenuCategory[] = [
     label: "Mutton & Beef",
     tamil: "இறைச்சி",
     image: "/images/dish-rendang.jpg",
-    imageAlt: "Slow-cooked spiced beef",
+    imageAlt: "Slow cooked spiced beef",
     items: [
       { name: "Mutton Curry" },
       { name: "Mutton Mysore", note: "Large or regular" },

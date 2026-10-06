@@ -235,7 +235,7 @@ export function MasalaDabba({ className }: { className?: string }) {
             </li>
           ))}
         </ul>
-        <p className="caption mt-2.5 text-ivory/45">The family masala, still bought whole, roasted and ground in-house.</p>
+        <p className="caption mt-2.5 text-ivory/45">Still bought whole, roasted and ground by the family.</p>
       </figcaption>
     </figure>
   );
