@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactShadows, Environment, Lightformer } from "@react-three/drei";
+import { ContactShadows, Environment, Lightformer, Preload } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, type RefObject } from "react";
 import * as THREE from "three";
@@ -288,7 +288,7 @@ export default function KandarScene({
     <Canvas
       className={className}
       dpr={[1, 1.75]}
-      frameloop={reduced ? "demand" : active ? "always" : "never"}
+      frameloop={reduced || !active ? "demand" : "always"}
       camera={{ position: [0, 0, 9], fov: 32 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       fallback={null}
@@ -304,6 +304,7 @@ export default function KandarScene({
         <Lightformer intensity={0.5} position={[0, -4, 2]} rotation-x={-Math.PI / 2} scale={[8, 8, 1]} color="#8b4a2b" />
       </Environment>
       <Kandar progress={progress} />
+      <Preload all />
     </Canvas>
   );
 }

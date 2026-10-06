@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { SpiceScene } from "@/components/three/lazy";
 import { HeritageButton } from "@/components/ui/HeritageButton";
 import { MasalaDabba } from "@/components/ui/MasalaDabba";
 import { RevealText } from "@/components/ui/RevealText";
+import { useIdleAfterLoad } from "@/hooks/useIdleAfterLoad";
 import { useInViewport } from "@/hooks/useInViewport";
 import { useIsDesktop, useReducedMotion } from "@/hooks/useMediaQuery";
 import { gsap, MQ, useGSAP } from "@/lib/gsap";
@@ -18,20 +19,7 @@ export function Hero() {
   const desktop = useIsDesktop();
   // Defer the WebGL chunk until the page has loaded and the main thread is idle,
   // so the headline and photographs paint first.
-  const [show3d, setShow3d] = useState(false);
-  useEffect(() => {
-    let idle = 0;
-    const start = () => {
-      const ric = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 400));
-      idle = ric(() => setShow3d(true), { timeout: 2000 }) as number;
-    };
-    if (document.readyState === "complete") start();
-    else window.addEventListener("load", start, { once: true });
-    return () => {
-      window.removeEventListener("load", start);
-      window.cancelIdleCallback?.(idle);
-    };
-  }, []);
+  const show3d = useIdleAfterLoad();
 
   useGSAP(
     () => {

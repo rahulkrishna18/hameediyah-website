@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { KandarScene } from "@/components/three/lazy";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { useIdleAfterLoad } from "@/hooks/useIdleAfterLoad";
 import { useInViewport } from "@/hooks/useInViewport";
 import { useReducedMotion } from "@/hooks/useMediaQuery";
 import { gsap, MQ, useGSAP } from "@/lib/gsap";
@@ -35,6 +36,8 @@ export function Kandar() {
   const ref = useRef<HTMLElement>(null);
   const stage = useRef<HTMLDivElement>(null);
   const progress = useRef(0);
+  // Warm the scene up in the background after load, so it is already drawn when the visitor arrives
+  const warm = useIdleAfterLoad(1500);
   const near = useInViewport(stage, { rootMargin: "120% 0px", once: true });
   const visible = useInViewport(stage, { rootMargin: "10% 0px" });
   const reduced = useReducedMotion();
@@ -115,7 +118,7 @@ export function Kandar() {
           {/* 3D kandar */}
           <div ref={stage} data-journey="kandar" className="relative min-h-[18rem] lg:col-span-5 lg:h-[72vh]">
             <div aria-hidden className="absolute inset-[8%] rounded-full bg-[radial-gradient(closest-side,rgb(217_154_30/0.28),transparent)]" />
-            {near && <KandarScene active={visible} progress={progress} reduced={reduced} className="!absolute inset-0" />}
+            {(warm || near) && <KandarScene active={visible} progress={progress} reduced={reduced} className="!absolute inset-0" />}
             {/* <p className="eyebrow absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.58rem] text-ink/45">
               Illustration · bamboo pole, two baskets
             </p> */}
@@ -147,7 +150,7 @@ export function Kandar() {
                 Nasi kandar sellers with the shoulder pole, 1950s. Photographer unknown  shown for the tradition, not of Hameediyah.
               </figcaption>
             </figure>
-            <p className="mt-8 font-display text-lg italic leading-snug text-ink/70">
+            <p className="mt-24 font-display text-lg italic leading-snug text-ink/70">
               Today, the family&rsquo;s own heritage nasi kandar carrier is proudly displayed inside the restaurant.
             </p>
           </div>

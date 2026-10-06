@@ -1,6 +1,6 @@
 "use client";
 
-import { Environment, Lightformer } from "@react-three/drei";
+import { Environment, Lightformer, Preload } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useEffect, useMemo, useRef, type RefObject } from "react";
 import * as THREE from "three";
@@ -189,7 +189,7 @@ export default function SpiceScene({
     <Canvas
       className={className}
       dpr={[1, 1.75]}
-      frameloop={reduced ? "demand" : active ? "always" : "never"}
+      frameloop={reduced || !active ? "demand" : "always"}
       camera={{ position: [0, 0, 9], fov: 34, near: 0.1, far: 40 }}
       gl={{ antialias: true, alpha: !background, powerPreference: "high-performance" }}
       fallback={null}
@@ -206,6 +206,7 @@ export default function SpiceScene({
         <Lightformer intensity={0.8} position={[-5, 0, 2]} rotation-y={Math.PI / 2} scale={[6, 3, 1]} color="#d99a1e" />
       </Environment>
       <Scene layout={layout} perKind={perKind} highlight={highlight} progress={progress} interactive={interactive} />
+      <Preload all />
     </Canvas>
   );
 }

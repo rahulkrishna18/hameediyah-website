@@ -6,6 +6,7 @@ import type { SpiceKind } from "@/components/three/spiceGeometries";
 import { Reveal } from "@/components/ui/Reveal";
 import { RevealText } from "@/components/ui/RevealText";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { useIdleAfterLoad } from "@/hooks/useIdleAfterLoad";
 import { useInViewport } from "@/hooks/useInViewport";
 import { useFinePointer, useIsDesktop, useReducedMotion } from "@/hooks/useMediaQuery";
 import { masala, masalaProcess, quotes } from "@/lib/content";
@@ -16,6 +17,7 @@ export function Spices() {
   const ref = useRef<HTMLElement>(null);
   const progress = useRef(0);
   const [highlight, setHighlight] = useState<SpiceKind | null>(null);
+  const warm = useIdleAfterLoad(3500);
   const near = useInViewport(ref, { rootMargin: "100% 0px", once: true });
   const visible = useInViewport(ref);
   const reduced = useReducedMotion();
@@ -55,7 +57,7 @@ export function Spices() {
   return (
     <section ref={ref} id="spices" data-theme="dark" aria-labelledby="spices-title" className="paper-dark relative isolate overflow-hidden text-ivory">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        {near && (
+        {(warm || near) && (
           <SpiceScene
             active={visible}
             layout="field"
