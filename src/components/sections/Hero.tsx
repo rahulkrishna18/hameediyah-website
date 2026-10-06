@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SpiceScene } from "@/components/three/lazy";
 import { HeritageButton } from "@/components/ui/HeritageButton";
+import { MasalaDabba } from "@/components/ui/MasalaDabba";
 import { RevealText } from "@/components/ui/RevealText";
 import { useInViewport } from "@/hooks/useInViewport";
 import { useIsDesktop, useReducedMotion } from "@/hooks/useMediaQuery";
@@ -40,9 +41,12 @@ export function Hero() {
         const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
         tl.fromTo("[data-hero-chart]", { opacity: 0, scale: 1.2 }, { opacity: 1, scale: 1.04, duration: 3.2, ease: "power2.out" }, 0)
           .from("[data-hero-digit]", { yPercent: 110, duration: 2.2, stagger: 0.12 }, 0.2)
-          .fromTo("[data-hero-arch]", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 2, ease: "expo.inOut" }, 0.35)
-          .from("[data-hero-arch-img]", { scale: 1.35, duration: 2.6 }, 0.35)
-          .from("[data-hero-print]", { y: 120, rotate: -14, opacity: 0, duration: 2 }, 1.0)
+          .from("[data-hero-tin]", { scale: 0.85, rotate: -30, opacity: 0, duration: 2.2 }, 0.35)
+          .from("[data-hero-cup]", { scale: 0, transformOrigin: "50% 50%", duration: 1.4, stagger: 0.08 }, 0.6)
+          // The lid starts closed over the tin, slides off, then settles behind it
+          .fromTo("[data-hero-lid]", { xPercent: -24, yPercent: 19, zIndex: 2 }, { xPercent: 70, yPercent: -12, rotate: 30, duration: 1.1, ease: "power3.in" }, 0.35)
+          .set("[data-hero-lid]", { zIndex: 0 }, 1.45)
+          .to("[data-hero-lid]", { xPercent: 0, yPercent: 0, rotate: 0, duration: 1.6 }, 1.45)
           .from("[data-hero-copy] > *", { y: 30, opacity: 0, duration: 1.4, stagger: 0.1 }, 1.1)
           .from("[data-hero-bar] > *", { y: 20, opacity: 0, duration: 1.2, stagger: 0.08 }, 1.4);
 
@@ -59,7 +63,8 @@ export function Hero() {
           .to("[data-hero-year]", { yPercent: -28, ease: "none" }, 0)
           .to("[data-hero-content]", { yPercent: 12, opacity: 0.15, ease: "none" }, 0)
           .to("[data-hero-visual]", { yPercent: -10, ease: "none" }, 0)
-          .to("[data-hero-print]", { yPercent: -40, rotate: -9, ease: "none" }, 0)
+          .to("[data-hero-tin]", { rotate: 24, ease: "none" }, 0)
+          .to("[data-hero-lid]", { rotate: -12, ease: "none" }, 0)
           .to("[data-hero-chart]", { scale: 1.16, ease: "none" }, 0);
       });
       mm.add(MQ.reduce, () => gsap.set("[data-reveal]", { opacity: 1 }));
@@ -163,46 +168,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Photographic composition */}
-        <div data-hero-visual data-reveal className="relative mx-auto w-full max-w-[30rem] lg:col-span-5 lg:max-w-none">
-          <div className="relative ml-auto aspect-[3/4] w-[78%] sm:w-[70%] lg:w-[86%]">
-            <div
-              data-hero-arch
-              className="absolute inset-0 overflow-hidden rounded-t-full shadow-[0_40px_80px_-30px_rgb(0_0_0/0.7)] ring-1 ring-gold/30"
-            >
-              <div data-hero-arch-img className="absolute inset-0">
-                <Image
-                  src="/images/hameediyah-facade.jpg"
-                  alt="The yellow and green façade of Hameediyah Restaurant on Campbell Street, its sign reading No. 164A"
-                  fill
-                  preload
-                  sizes="(min-width: 1024px) 34vw, 70vw"
-                  className="object-cover object-[50%_30%] saturate-[0.9]"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-green-deep/60 via-transparent to-transparent" />
-            </div>
-            <span className="eyebrow absolute -right-1 top-[12%] origin-top-right translate-x-full rotate-90 text-[0.58rem] text-gold/80 max-sm:hidden">
-              No. 164A Campbell Street
-            </span>
-          </div>
-
-          <figure
-            data-hero-print
-            className="absolute -bottom-6 left-0 w-[52%] rotate-[-5deg] bg-[#f6efe2] p-2 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] sm:w-[46%] sm:p-2.5 lg:-bottom-10 lg:-left-6 lg:w-[54%]"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src="/images/weld-quay-1910.jpg"
-                alt="Weld Quay, Penang, photographed around 1910"
-                fill
-                loading="eager"
-                sizes="(min-width: 1024px) 22vw, 45vw"
-                className="archival object-cover"
-              />
-            </div>
-            <figcaption className="caption px-1 pb-0.5 pt-2 text-[0.68rem] text-ink/70 sm:text-[0.74rem]">Weld Quay, Penang, c. 1910</figcaption>
-          </figure>
+        {/* Masala dabba */}
+        <div data-hero-visual data-reveal className="relative mx-auto w-full max-w-[30rem] lg:col-span-5 lg:max-w-[36rem]">
+          <MasalaDabba />
         </div>
       </div>
 
