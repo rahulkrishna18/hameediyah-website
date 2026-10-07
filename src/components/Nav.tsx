@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import { useEffect, useState, type MouseEvent } from "react";
 import { useMotion } from "@/components/providers/MotionProvider";
 import { HeritageButton } from "@/components/ui/HeritageButton";
@@ -9,14 +10,18 @@ import { mapsDirectionsUrl, nav, visit } from "@/lib/content";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export function Wordmark({ light = true, className }: { light?: boolean; className?: string }) {
+/** The Hameediyah badge logo. Full colour, so it reads on both dark and light sections. */
+export function Wordmark({ className, preload }: { className?: string; preload?: boolean }) {
   return (
-    <span className={cn("flex items-baseline gap-2.5", className)}>
-      <span className={cn("font-display text-[1.45rem] leading-none tracking-[-0.01em]", light ? "text-ivory" : "text-ink")}>
-        Hameediyah
-      </span>
-      <span className={cn("eyebrow hidden text-[0.56rem] tracking-[0.3em] sm:inline", light ? "text-gold" : "text-cinnamon")}>Est. 1907</span>
-    </span>
+    <Image
+      src="/brand/hameediyah-logo.png"
+      alt="Hameediyah, Est. 1907"
+      width={1600}
+      height={513}
+      preload={preload}
+      sizes="(min-width: 640px) 230px, 160px"
+      className={cn("h-10 w-auto sm:h-[3.1rem]", className)}
+    />
   );
 }
 
@@ -89,8 +94,8 @@ export function Nav() {
         )}
       >
         <nav aria-label="Primary" className="mx-auto flex h-[var(--nav-h)] max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-12">
-          <a href="#top" onClick={(e) => go(e, "#top")} aria-label="Hameediyah  back to top" className="relative z-10">
-            <Wordmark light={!light} />
+          <a href="#top" onClick={(e) => go(e, "#top")} className="relative z-10 block">
+            <Wordmark preload />
           </a>
 
           <ul className="hidden items-center gap-9 lg:flex">

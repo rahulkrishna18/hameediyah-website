@@ -49,7 +49,7 @@ export function Footer() {
 
         <div className="mt-20 grid gap-12 border-t border-ivory/10 pt-12 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Wordmark />
+            <Wordmark className="h-16 sm:h-[4.5rem]" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/55">
               Nasi kandar on Lebuh Campbell since 1907. A story carried from Tamil Nadu, seven generations deep.
             </p>

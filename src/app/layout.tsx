@@ -70,6 +70,8 @@ const jsonLd = {
   "@type": "Restaurant",
   name: visit.name,
   foundingDate: String(FOUNDED),
+  logo: `${siteUrl}/brand/hameediyah-logo.png`,
+  image: `${siteUrl}/brand/hameediyah-logo.png`,
   servesCuisine: ["Nasi Kandar", "Malaysian", "Indian Muslim"],
   telephone: "+60 4-261 1095",
   address: {
