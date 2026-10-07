@@ -95,7 +95,7 @@ export function Hero() {
       >
         <span className="flex text-outline text-[44vw] lg:text-[30vw]">
           {"1907".split("").map((d, i) => (
-            <span key={i} className="inline-block overflow-hidden">
+            <span key={i} className="-mr-[0.12em] inline-block overflow-hidden pr-[0.12em]">
               <span data-hero-digit className="inline-block">
                 {d}
               </span>

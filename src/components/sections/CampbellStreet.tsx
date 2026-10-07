@@ -22,7 +22,7 @@ export function CampbellStreet() {
           { yPercent: 8, ease: "none", scrollTrigger: { trigger: ref.current, start: "top bottom", end: "bottom top", scrub: true } },
         );
         gsap.fromTo(
-          "[data-year-1907] span",
+          "[data-year-1907] [data-digit]",
           { yPercent: 105 },
           { yPercent: 0, duration: 1.8, ease: "expo.out", stagger: 0.09, scrollTrigger: { trigger: "[data-year-1907]", start: "top 80%", once: true } },
         );
@@ -101,8 +101,11 @@ export function CampbellStreet() {
               className="flex font-display text-[clamp(7rem,26vw,24rem)] font-[300] leading-[0.8] tracking-[-0.06em] text-gold"
             >
               {"1907".split("").map((d, i) => (
-                <span key={i} aria-hidden className="inline-block overflow-hidden">
-                  <span className="inline-block">{d}</span>
+                // Padding gives the glyph room past its tightened advance (the 7 overhangs); the negative margin keeps the spacing
+                <span key={i} aria-hidden className="-mr-[0.12em] inline-block overflow-hidden pr-[0.12em]">
+                  <span data-digit className="inline-block">
+                    {d}
+                  </span>
                 </span>
               ))}
             </p>

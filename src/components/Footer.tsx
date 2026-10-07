@@ -31,8 +31,9 @@ export function Footer() {
       <div className="mx-auto max-w-[1600px] px-5 pb-10 pt-24 sm:px-8 lg:px-12 lg:pt-32">
         {/* 1907 → Today */}
         <div data-motif className="flex items-center gap-4 sm:gap-8" aria-label="1907 to today">
-          <span className="overflow-hidden">
-            <span data-motif-year className="block font-display text-[clamp(3rem,11vw,11rem)] font-[300] leading-[0.9] tracking-[-0.05em] text-gold">
+          {/* Masks are padded so the 7's overhang and the y's descender are not clipped; negative margins keep the layout */}
+          <span className="-mb-[0.2em] -mr-[0.12em] overflow-hidden text-[clamp(3rem,11vw,11rem)]">
+            <span data-motif-year className="block pb-[0.2em] pr-[0.12em] font-display font-[300] leading-[0.9] tracking-[-0.05em] text-gold">
               1907
             </span>
           </span>
@@ -40,8 +41,8 @@ export function Footer() {
             <span data-motif-line className="absolute inset-0 origin-left bg-gradient-to-r from-gold via-gold/60 to-ivory/40" />
             <span data-motif-dot className="absolute -right-1 h-2.5 w-2.5 rotate-45 border-r border-t border-ivory/70" />
           </span>
-          <span className="overflow-hidden">
-            <span data-motif-year className="block font-display text-[clamp(3rem,11vw,11rem)] font-[300] italic leading-[0.9] tracking-[-0.04em] pr-[0.08em]">
+          <span className="-mb-[0.2em] -mr-[0.12em] overflow-hidden text-[clamp(3rem,11vw,11rem)]">
+            <span data-motif-year className="block pb-[0.2em] pr-[0.2em] font-display font-[300] italic leading-[0.9] tracking-[-0.04em]">
               Today
             </span>
           </span>

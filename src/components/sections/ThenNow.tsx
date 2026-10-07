@@ -14,6 +14,24 @@ type Pair = { id: string; label: string; then: Shot; now: Shot; note: string };
 
 const PAIRS: Pair[] = [
   {
+    id: "shopfront",
+    label: "The shopfront",
+    note: "The green and yellow façade has been kept  the signs have been renewed around it.",
+    then: {
+      src: "/images/ref-shopfront-2019.jpg",
+      alt: "Hameediyah's entrance in 2019 under an older signboard reading Est. 1907 and 164A",
+      when: "2019",
+      caption: "The old signboard: “Estd 1907”. Shahnaz Fazlie Shahrizal / NST.",
+      archival: true,
+    },
+    now: {
+      src: "/images/hameediyah-facade.jpg",
+      alt: "The repainted yellow and green façade of Hameediyah at No. 164A Campbell Street",
+      when: "Recent",
+      caption: "No. 164A Campbell Street. Slleong, CC0.",
+    },
+  },
+  {
     id: "waterfront",
     label: "The waterfront",
     note: "Where the men first carried nasi kandar to the docks. Viewpoints differ  the quay itself remains.",
@@ -36,24 +54,6 @@ const PAIRS: Pair[] = [
       alt: "Ahmed Seeni Pakir and Abdul Sukkor Syed Ibrahim presenting Hameediyah dishes",
       when: "2019",
       caption: "Ahmed Seeni Pakir (sixth generation) and Abdul Sukkor Syed Ibrahim (seventh). Shahnaz Fazlie Shahrizal / NST.",
-    },
-  },
-  {
-    id: "shopfront",
-    label: "The shopfront",
-    note: "The green and yellow façade has been kept  the signs have been renewed around it.",
-    then: {
-      src: "/images/ref-shopfront-2019.jpg",
-      alt: "Hameediyah's entrance in 2019 under an older signboard reading Est. 1907 and 164A",
-      when: "2019",
-      caption: "The old signboard: “Estd 1907”. Shahnaz Fazlie Shahrizal / NST.",
-      archival: true,
-    },
-    now: {
-      src: "/images/hameediyah-facade.jpg",
-      alt: "The repainted yellow and green façade of Hameediyah at No. 164A Campbell Street",
-      when: "Recent",
-      caption: "No. 164A Campbell Street. Slleong, CC0.",
     },
   },
 ];
